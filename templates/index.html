@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<style>
+table { font-family: arial, sans-serif;
+border-collapse: collapse;
+width: 100%;
+}
+td, th { 
+border: 1px solid white;
+text-align: left;
+padding: 8px;
+}
+tr:nth-child(even) { 
+background-color: white;
+}
+</style>
+<body>
+
+<p>Data Measured</p>
+
+<table>
+<tr>
+<th>Date/Time </th>
+<th>Temperature</th>
+<th> Humidity</th>
+</tr>
+
+{% for dat in data %}
+<tr>
+<td>{{ dat[0] }} </td>
+<td>{{ dat[1] }} </td>
+<td>{{ dat[2] }} </td>
+
+</tr>
+{% endfor %}
+</table>
+</body>
+</html>
